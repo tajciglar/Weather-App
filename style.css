@@ -1,0 +1,53 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+#container {
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    height: 100%;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#searchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    font-size: 3vh;
+}
+
+#searchBar input {
+    max-width: 300px;
+    min-width: 250px;
+    height: 35px;
+    font-size: 3vh;
+    text-align: center;
+    margin: 2%;
+}
+
+#searchBar button{
+    width: 150px;
+    height: 30px;
+}
+
+
+#infoContainer {
+    border: solid 1px black;
+    font-size: 2vh;
+    padding: 2%;
+    margin: 2%;
+}
