@@ -4,17 +4,28 @@ html, body{
     height: 100%;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+}
 
 #container {
-    display: grid;
-    grid-template-rows: 1fr 8fr;
-    height: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
 }
 
 #header {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;;
 }
+
+h1 {
+    color: #333;
+  }
 
 #main {
     display: flex;
@@ -30,6 +41,12 @@ html, body{
     font-size: 3vh;
 }
 
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 #searchBar input {
     max-width: 300px;
     min-width: 250px;
@@ -37,17 +54,41 @@ html, body{
     font-size: 3vh;
     text-align: center;
     margin: 2%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
 }
 
-#searchBar button{
-    width: 150px;
-    height: 30px;
+#searchButton{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
+#searchButton:hover {
+    background-color: #45a049;
+}
 
 #infoContainer {
     border: solid 1px black;
     font-size: 2vh;
     padding: 2%;
     margin: 2%;
+}
+
+#infoContainer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#infoContainer p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 2vh;
+    color: #333;
 }

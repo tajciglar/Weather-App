@@ -1,5 +1,5 @@
 const submit = document.getElementById('searchButton');
-console.log(submit)
+
 submit.addEventListener('click', async (event) =>{
     event.preventDefault();
     
@@ -48,11 +48,20 @@ function showOnScreen(info, name) {
     mainContainer.appendChild(infoContainer);
     infoContainer.setAttribute('id', 'infoContainer');
     
-    // Iterate over both arrays simultaneously
     for (let i = 0; i < info.length; i++) {
         const p = document.createElement('p');
         infoContainer.appendChild(p);
-        p.textContent = `${name[i]} ${info[i]}`;
+        if (name[i] === 'Temperature:' || name[i] === 'Feels like:')
+        {
+            console.log("in");
+            p.innerHTML = `${name[i]} ${info[i]} &deg;C`;
+        } else if (name[i] === 'Humidity:'){
+            p.textContent = `${name[i]} ${info[i]} %`;
+        } else if (name[i] === 'Wind:') {
+            p.textContent = `${name[i]} ${info[i]} km/h`;
+        } else {
+            p.innerHTML = `${name[i]} ${info[i]}`;
+        }        
     }
 }
 
